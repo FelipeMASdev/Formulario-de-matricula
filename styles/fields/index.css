@@ -8,6 +8,9 @@ input, textarea, select {
 
   padding: 0.75rem 1rem;
   font: var(--text);
+  color: var(--text-primary);
+
+
 }
 
 label{
@@ -65,6 +68,20 @@ div:has(> #birth) {
 #gender{
   background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1.125rem) var(--surface-primary);
 
+}
+
+.adress>.flex{
+  gap: 1.25rem;
+}
+
+
+.input-wrapper:has(input:disabled){
+  opacity: 0.5;
+
+  color:va
+  input{
+    background-color: var(--surface-disabled);  
+  }
 }
 
 

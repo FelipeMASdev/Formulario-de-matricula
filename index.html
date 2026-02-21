@@ -76,10 +76,46 @@
                   <path d="M24 26V42M24 26C22.5996 26 19.9831 29.9886 19 31M24 26C25.4004 26 28.017 29.9886 29 31" stroke="#D6D3D1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
-                <p>
+                <p id="selecionar-arquivos">
                   Clique aqui para <br>
                   selecionar os arquivos
                 </p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="adress">
+            <legend>Endereço residencial</legend>
+
+            <div class="input-wrapper">
+              <label for="cep">CEP</label>
+              <input type="text" id="cep" name="cep">
+            </div>
+
+            <div class="flex">
+              <div class="input-wrapper flex-2">
+                <label for="street">Rua</label>
+                <input type="text" id="street" name="street"
+                value="Rua das Flores" disabled>
+              </div>
+
+              <div class="input-wrapper flex-1">
+                <label for="number">Número</label>
+                <input type="number" id="number" name="number">
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="input-wrapper flex-2">
+                <label for="city">Cidade</label>
+                <input type="text" id="city" name="city"
+                value="São Paulo" disabled>
+              </div>
+            
+              <div class="input-wrapper flex-1">
+                <label for="state">Estado</label>
+                <input type="text" id="state" name="state" 
+                value="SP" disabled>
               </div>
             </div>
           </fieldset>
