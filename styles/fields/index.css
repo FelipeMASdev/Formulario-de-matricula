@@ -1,3 +1,5 @@
+@import url(droparea.css);
+
 input, textarea, select {
   appearance: none;
   width: 100%;
@@ -16,7 +18,9 @@ label{
   margin-bottom: 0.25rem;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus, select:focus, textarea:focus, 
+input[type="date"]:focus-within {
+  
   outline: 0.25rem solid var(--surface-secondary);
   border:  0.125rem solid var(--stroke-highlight);
   outline-offset: .1px;
@@ -39,6 +43,7 @@ div:has(> #birth) {
     top:50%;
     transform:translateY(-50%);
     z-index: 1;
+    pointer-events: none;
   }
 
   #calendar-icon{
@@ -51,12 +56,15 @@ div:has(> #birth) {
     right: 1.125rem;
     top:50%;
     transform:translateY(-50%);
-    z-index: 2;  
+    z-index: 2;
+    pointer-events: none;
   }
   /* end of workaround */
-  
-  input{
-    
-  }
 }
+
+#gender{
+  background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1.125rem) var(--surface-primary);
+
+}
+
 
