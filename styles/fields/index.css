@@ -78,10 +78,36 @@ div:has(> #birth) {
 .input-wrapper:has(input:disabled){
   opacity: 0.5;
 
-  color:va
   input{
     background-color: var(--surface-disabled);  
   }
+}
+
+.error{
+  display: none;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown){
+  border: 0.1875rem solid var(--semantic-error);
+
+  ~ .error{
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    margin-top: .25rem;
+
+    font: var(--text-sm);
+    color: var(--semantic-error);
+
+  }
+}
+
+input + small{
+  font: var(--text-sm);
+  color: #78716C;
+
+  display: inline-block;
+  margin-top: .25rem;
 }
 
 

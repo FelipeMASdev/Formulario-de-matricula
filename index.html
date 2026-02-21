@@ -119,6 +119,33 @@
               </div>
             </div>
           </fieldset>
+          
+          <fieldset class="guardian">
+            <legend>Informações do responsável</legend>
+
+            <div class="input-wrapper">
+              <lavel for="guardian">Nome do responsável</lavel>
+              <input type="text" id="guardian" name="guardian">
+              <small>Principal responsável legal e contato de emergência</small>
+            </div>
+
+            <div class="input-wrapper">
+              <lavel for="phone">Telefone</lavel>
+              <input type="tel" id="phone" name="phone"
+              placeholder="(11) 9 9888-6655">
+            </div>
+            
+            <div class="input-wrapper">
+              <lavel for="mail">Email</lavel>
+              <input type="email" id="mail" name="mail" 
+              required placeholder="email@email.com">
+              <div class="error">
+                <img src="assets/icons/alert-circle.svg" alt="Icone de alerta vermelho">
+                <span>Insira um e-mail válido</span>
+              </div>
+            </div>
+          </fieldset>
+
         </form>
       </div>
     </main>
