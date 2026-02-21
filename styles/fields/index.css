@@ -1,0 +1,62 @@
+input, textarea, select {
+  appearance: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--stroke-default);
+
+  padding: 0.75rem 1rem;
+  font: var(--text);
+}
+
+label{
+  font: var(--text-sm);
+  color: var(--text-secondary);
+
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 0.25rem solid var(--surface-secondary);
+  border:  0.125rem solid var(--stroke-highlight);
+  outline-offset: .1px;
+}
+
+div:has(> #birth) {
+  /* workaroud for replacing the calendar icon in input date without -webkit solution.
+    using 2 styled divs one as backgroud-color, one as background image, so the background color can change along with the input field`s if needed.
+  */
+  position: relative;
+
+  &::before{
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--surface-primary);
+
+    position: absolute;
+    right: 1.125rem;
+    top:50%;
+    transform:translateY(-50%);
+    z-index: 1;
+  }
+
+  #calendar-icon{
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(../../assets/icons/calendar-03.svg) center/contain;
+    
+    position: absolute;
+    right: 1.125rem;
+    top:50%;
+    transform:translateY(-50%);
+    z-index: 2;  
+  }
+  /* end of workaround */
+  
+  input{
+    
+  }
+}
+
