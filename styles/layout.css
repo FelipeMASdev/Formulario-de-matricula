@@ -49,3 +49,29 @@ aside{
     }
   }
 }
+
+@media (max-aspect-ratio:3/4) {
+  html, body {
+    height: auto;
+    overflow: auto;
+  }
+
+  #app {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  main, aside {
+    overflow: visible;
+  }
+
+  aside {
+    order: -1;
+  }
+
+  main .main-container, main .aside-container{
+    max-width: 100vw;
+  }
+}
